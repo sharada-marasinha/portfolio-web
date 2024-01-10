@@ -111,7 +111,7 @@ a.active,a:hover{
 /* ---------------------------------nav css----------------------------------- */
 
 section{
-  background: url(img/background.jpg) no-repeat;
+  background: url(/img/background-img.jpg) no-repeat;
   background-size: cover;
   height: calc(100vh - 80px);
 }
