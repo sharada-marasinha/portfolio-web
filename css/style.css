@@ -123,8 +123,9 @@ section{
   float: left;
 }
 .bio{
-  color: white;
+  color: rgb(0, 0, 0);
   padding-top: 100px;
+  background-color: rgb(255, 255, 255);
 }
 bio,h1{
   font-size: xx-large;
