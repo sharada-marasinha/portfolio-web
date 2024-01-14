@@ -175,3 +175,30 @@ bio,h1{
     left: 0;
   }
 }
+
+/* Card */
+
+.cardContainner{
+  display: flex;
+}
+.card{
+
+  max-width: 20%;
+  background-color: #040D12;
+  margin: 10%;
+  color: white;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.card img{
+  border-radius: 20px 20px 0 0;
+}
+#cardButton{
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  margin:  20px 0;
+  border-radius: 10px 0;
+  font-weight: 900;
+}
