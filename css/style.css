@@ -1,14 +1,56 @@
-*{
-  padding: 0;
-  margin: 0;
-  text-decoration: none;
-  list-style: none;
+/*** The new CSS Reset - version 1.2.0 (last updated 23.7.2021) ***/
+
+/* Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-body{
-  font-family: montserrat;
+/*
+  Remove list styles (bullets/numbers)
+  in case you use it with normalize.css
+*/
+ol, ul {
+  list-style: none;
 }
+
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
+}
+
+/* Removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/* ------------------------------------------------------ */
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
 
 /* ---------------------------------nav css----------------------------------- */
 
@@ -50,6 +92,7 @@ nav ul li a{
 a.active,a:hover{
   background: #183D3D;
   transition: .5s;
+  cursor: pointer;
 }
 
 .chackbtn{
@@ -64,6 +107,35 @@ a.active,a:hover{
 #chack{
   display: none;
 
+}
+
+/* ---------------------------------nav css----------------------------------- */
+
+section{
+  background-color: #183D3D;
+  background-size: cover;
+  height: calc(100vh - 80px);
+}
+
+#propic{
+  margin: 5em;
+  border-radius: 100%;
+  float: left;
+}
+.bio{
+  color: white;
+  padding-top: 100px;
+}
+bio,h1{
+  font-size: xx-large;
+  line-height: 2em;
+}
+
+.bio,p{
+  line-height: 1.5em;
+  font-size: large;
+  text-align: justify;
+  padding: 20px;
 }
 
 @media (max-width: 952px){
@@ -101,13 +173,4 @@ a.active,a:hover{
   #chack:checked ~ ul{
     left: 0;
   }
-}
-
-
-/* ---------------------------------nav css----------------------------------- */
-
-section{
-  background-color: #183D3D;
-  background-size: cover;
-  height: calc(100vh - 80px);
 }
