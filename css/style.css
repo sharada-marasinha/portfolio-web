@@ -49,9 +49,12 @@ textarea {
 /* ---------------------------------nav css----------------------------------- */
 
 nav{
+
   background: #040D12;
   height: 80px;
   width: 100%;
+  position: absolute;
+  top: 0;
 }
 label.logo{
   color: white;
@@ -105,10 +108,6 @@ a.active,a:hover{
 
 /* ---------------------------------nav css----------------------------------- */
 
-section{
-
-}
-
 #propic{
   margin: 5em;
   border-radius: 100%;
@@ -116,8 +115,13 @@ section{
 }
 .bio{
   color: rgb(0, 0, 0);
-  padding-top: 100px;
   background-color: rgb(255, 255, 255);
+  height: 400px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  margin-top: 50px;
 }
 bio,h1{
   font-size: xx-large;
@@ -213,6 +217,45 @@ bio,h1{
 }
 
 .secondCoDiv1,.secondCoDiv2{
+  width: 50%;
+}
+
+#table {
+  
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  
+}
+
+#table td, #table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#table tr:nth-child(even){background-color: #f2f2f2;}
+
+#table tr:hover {background-color: #ddd;}
+
+#table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+.container3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid green; 
+}
+
+.conDiv13 ,.conDiv23{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
   width: 50%;
 }
 
