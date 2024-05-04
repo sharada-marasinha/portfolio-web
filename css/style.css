@@ -6,32 +6,26 @@
   display: revert;
 }
 
-/* Preferred box-sizing value */
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/*
-  Remove list styles (bullets/numbers)
-  in case you use it with normalize.css
-*/
+
 ol, ul {
   list-style: none;
 }
 
-/* For images to not be able to exceed their container */
 img {
   max-width: 100%;
 }
 
-/* Removes spacing between cells in tables */
 table {
   border-collapse: collapse;
 }
 
-/* Revert the 'white-space' property for textarea elements on Safari */
 textarea {
   white-space: revert;
 }
@@ -112,9 +106,7 @@ a.active,a:hover{
 /* ---------------------------------nav css----------------------------------- */
 
 section{
-  background-color: #183D3D;
-  background-size: cover;
-  height: calc(100vh - 80px);
+
 }
 
 #propic{
@@ -176,23 +168,21 @@ bio,h1{
   }
 }
 
-/* Card */
-
 .cardContainner{
+  width: 100%;
   display: flex;
 }
 .card{
-
-  max-width: 20%;
   background-color: #040D12;
-  margin: 10%;
+  margin: 1%;
   color: white;
   text-align: center;
   border-radius: 20px;
+  
 }
 
 .card img{
-  border-radius: 20px 20px 0 0;
+  padding: 10px;
 }
 #cardButton{
   background-color: white;
@@ -201,4 +191,14 @@ bio,h1{
   margin:  20px 0;
   border-radius: 10px 0;
   font-weight: 900;
+}
+
+.container{
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  background-color: #183D3D;
+  background-size: cover;
+  height: 50%;
+  display: flexbox;
 }
