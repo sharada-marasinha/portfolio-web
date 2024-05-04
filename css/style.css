@@ -171,6 +171,7 @@ bio,h1{
 .cardContainner{
   width: 100%;
   display: flex;
+  padding: 5%;
 }
 .card{
   background-color: #040D12;
@@ -202,3 +203,16 @@ bio,h1{
   height: 50%;
   display: flexbox;
 }
+
+.secondContainer{
+  padding: 10%;
+  display: flex;
+  width: 100%;
+  background-color: #183D3D;
+  height: auto;
+}
+
+.secondCoDiv1,.secondCoDiv2{
+  width: 50%;
+}
+
