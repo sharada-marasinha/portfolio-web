@@ -1,10 +1,17 @@
-nav{
+:root {
+  --primary: #183D3D;
+  --good: #c7ecee;
+}
 
-  background: #040D12;
+body{
+  margin: 0;
+  padding: 0;
+}
+
+nav{
+  background: var(--primary);
   height: 80px;
   width: 100%;
-  position: absolute;
-  top: 0;
 }
 label.logo{
   color: white;
@@ -13,18 +20,16 @@ label.logo{
   padding: 0 70px;
   font-weight: bold;
   font-size: 25px;
-
 }
 
 nav ul{
   float: right;
   margin-right: 20px;
+  line-height: 50px;
 }
 
 nav ul li{
   display: inline-block;
-  line-height: 80px;
-  margin: 0 5px;
 }
 
 nav ul li a{
@@ -37,7 +42,7 @@ nav ul li a{
 }
 
 a.active,a:hover{
-  background: #183D3D;
+  background: var(--primary);
   transition: .5s;
   cursor: pointer;
 }
@@ -55,23 +60,11 @@ a.active,a:hover{
   float: left;
 }
 .bio{
-  color: rgb(0, 0, 0);
-  background-color: rgb(255, 255, 255);
-  height: 400px;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  display: flex;
-  margin-top: 50px;
-}
-bio,h1{
-  font-size: xx-large;
-  line-height: 2em;
+  background-color: var(--good);
 }
 
 .bio,p{
   line-height: 1.5em;
-  font-size: large;
   text-align: justify;
   padding: 20px;
 }
@@ -139,61 +132,28 @@ bio,h1{
   font-weight: 900;
 }
 
-.container{
-  width: 100%;
-  position: fixed;
-  z-index: -1;
-  background-color: #183D3D;
-  background-size: cover;
-  height: 50%;
-  display: flexbox;
-}
-
 .secondContainer{
-  padding: 10%;
-  display: flex;
-  width: 100%;
-  background-color: #183D3D;
-  height: auto;
-}
+  background-color: var(--primary);
+  color: white;
 
-.secondCoDiv1,.secondCoDiv2{
-  width: 50%;
 }
-
 #table {
-  
-  font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  background-color: #ddd;
-  margin: 15%;
-  
+  margin: 5%;  
 }
 
 #table td, #table th {
   border: 2px solid #000000;
-  padding: 8px;
+  padding: 10px;
 }
 #table th {
-  padding-top: 12px;
-  padding-bottom: 12px;
   text-align: center;
-  background-color: #04AA6D;
+  background-color: var(--primary);
   color: white;
-  font-weight: 1000;
 }
-
 .container3{
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px solid green; 
-}
-.conDiv13 ,.conDiv23{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 50;
-  width: 50%;  
 }
 
