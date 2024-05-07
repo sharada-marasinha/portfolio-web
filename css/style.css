@@ -157,3 +157,13 @@ a.active,a:hover{
   align-items: center;
 }
 
+#footer{
+  background-color: #183D3D;
+  color: wheat;
+  text-align: center;
+}
+
+details{
+  padding: 10px;
+}
+
