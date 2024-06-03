@@ -13,11 +13,6 @@
 
 
 <style>
-    body {
-        margin: 0;
-        padding: 0;
-        background-color: #f0f0f0;
-    }
     .audio-player {
         position: fixed;
         bottom: 0;
@@ -33,20 +28,26 @@
     }
 </style>
 
-<body> 
+
 
       
-      <div class="audio-player">
-          Background Music
-          <audio autoplay loop controls>
-            <source src="music/background-music.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
-      </div>
+
+
+
 
 </head>
 <!--Helloo-->
 <body>
+
+    <div class="audio-player">
+        Background Music
+        <audio audio id="background-audio" autoplay loop>
+          <source src="music/background-music.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+
+        <button class="mute-button btn btn-success" onclick="toggleMute()">Mute</button>
+    </div>
     <div class="container-fluid  ">
         <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom bg-body-tertiary">
             <a href="/"

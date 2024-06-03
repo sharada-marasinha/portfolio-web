@@ -7,4 +7,25 @@ document.addEventListener("DOMContentLoaded", function() {
             this.classList.add('active');
         });
     });
+
+
+    const audio = document.getElementById('background-audio');
+const muteButton = document.querySelector('.mute-button');
+
+muteButton.addEventListener('click', toggleMute);
+
+
+function toggleMute() {
+
+    console.log("hello");
+    if (audio.muted) {
+        audio.muted = false;
+        muteButton.textContent = 'Mute';
+    } else {
+        audio.muted = true;
+        muteButton.textContent = 'Unmute';
+    }
+}
 });
+
+
