@@ -12,7 +12,37 @@
     <link rel="shortcut icon" href="img/icons/fav.png" type="image/x-icon">
 </head>
 
-<body>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+    }
+    .audio-player {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        padding: 10px;
+        color: #fff;
+        text-align: center;
+    }
+    audio {
+        width: 100%;
+    }
+</style>
+
+<body> 
+
+      
+      <div class="audio-player">
+          Background Music
+          <audio autoplay loop controls>
+            <source src="music/background-music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+      </div>
     <div class="container-fluid  ">
         <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom bg-body-tertiary">
             <a href="/"
@@ -31,6 +61,7 @@
             </ul>
         </header>
     </div>
+
     <hgroup>
         <div class="container-fluid p-5">
             <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
@@ -151,6 +182,8 @@
             </div>
         </div>
     </div>
+
+
     <!-- Core Languages -->
     <div class="container-fluid   px-5 py-5" id="icon-grid">
         <h2 class="pb-2 border-bottom">Core Languages</h2>
@@ -727,7 +760,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <div class="card text-center m-5">
+                <div class="card rounded-5 text-center m-5 ">
                     <div class="card-header">
                         Recommendation
                     </div>
@@ -826,6 +859,29 @@
         </div>
     </div>
 
+    <div class="bg-white py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
+                <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                    <dt class="text-base leading-7 text-gray-600">Transactions every 24 hours</dt>
+                    <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">44 million
+                    </dd>
+                </div>
+                <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                    <dt class="text-base leading-7 text-gray-600">Assets under holding</dt>
+                    <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">$119
+                        trillion</dd>
+                </div>
+                <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                    <dt class="text-base leading-7 text-gray-600">New users annually</dt>
+                    <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">46,000</dd>
+                </div>
+            </dl>
+        </div>
+    </div>
+
+
+
     <footer class="container-fluid">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
             <div class="col-md-4 d-flex align-items-center">
@@ -888,6 +944,7 @@
         var x = document.getElementsByTagName('script')[0];
         x.parentNode.insertBefore(s, x);
     </script>
+    
     <script src="app.js"></script>
 </body>
 
