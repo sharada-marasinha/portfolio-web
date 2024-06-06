@@ -11,43 +11,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="shortcut icon" href="img/icons/fav.png" type="image/x-icon">
 
-
-<style>
-    .audio-player {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background-color: #333;
-        padding: 10px;
-        color: #fff;
-        text-align: center;
-    }
-    audio {
-        width: 100%;
-    }
-</style>
-
-
-
-      
-
-
-
-
 </head>
 <!--Helloo-->
+
 <body>
-
-    <div class="audio-player">
-        Background Music
-        <audio audio id="background-audio" autoplay loop>
-          <source src="music/background-music.mp3" type="audio/mpeg">
-          Your browser does not support the audio element.
-        </audio>
-
-        <button class="mute-button btn btn-success" onclick="toggleMute()">Mute</button>
-    </div>
     <div class="container-fluid  ">
         <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom bg-body-tertiary">
             <a href="/"
@@ -55,7 +22,7 @@
                 <svg class="bi me-2" width="40" height="32">
                     <use xlink:href="#bootstrap" />
                 </svg>
-                <span class="fs-4">Sharada Marasinghe</span>
+                <span class="fs-10">Sharada Marasinghe</span>
             </a>
 
             <ul class="nav nav-pills">
@@ -764,7 +731,7 @@
     <!-- Recommendations -->
     <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col-6">
                 <div class="card rounded-5 text-center m-5 ">
                     <div class="card-header">
                         Recommendation
@@ -786,53 +753,32 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="col">
-                <div class="card text-center m-5">
+            <div class="col-6">
+                <div class="card rounded-5 text-center m-5 ">
                     <div class="card-header">
                         Recommendation
                     </div>
-                    <div class="card-body">
-                        <h5 class="card-title"><strong>Frank Cronemberg (MSc.(SE), MBCS(UK))</strong></h5>
-                        <p>Technical Lead / Engineering Manager at Sysco Labs</p>
-                        <p class="card-text">"Had privilege of working together with this great guy in academics and
-                            projects.
-                            He is an efficient and hardworking result oriented team player. Dedicated to his work and
-                            his
-                            attitudes and qualities are always beyond one’s expectations. I would highly recommend him
-                            for any
-                            critical projects."</p>
+                    <div class="card-body mx-auto">
+                        <h5 class="card-title"><strong>Prathibha Weerasinghe</strong></h5>
+                        <p>Lecturer | Institute of Computer Engineering Technology</p>
+                        <p class="card-text">"I have had the pleasure of working with Sharada Marasinghe at the
+                            Institute of Computer Engineering Technology, and he consistently impresses me with his
+                            efficiency, hard work, and strong team spirit. His technical skills and positive attitude
+                            make him an exceptional lecturer.
+                            Sharada is highly organized, has a great personality, and is always willing to help. I
+                            highly recommend him for any academic endeavor."</p>
                         <a href="#" class="btn btn-primary"><i class="bi bi-linkedin"></i></a>
                     </div>
                     <div class="card-footer text-body-secondary">
-                        December 11, 2023, Frank was Sharada’s teacher
+                        June 4, 2024, Prathibha worked with Sharada on the same team
                     </div>
                 </div>
-            </div> -->
-            <!-- <div class="col">
-                <div class="card text-center m-5">
-                    <div class="card-header">
-                        Recommendation
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title"><strong>Frank Cronemberg (MSc.(SE), MBCS(UK))</strong></h5>
-                        <p>Technical Lead / Engineering Manager at Sysco Labs</p>
-                        <p class="card-text">"Had privilege of working together with this great guy in academics and
-                            projects.
-                            He is an efficient and hardworking result oriented team player. Dedicated to his work and
-                            his
-                            attitudes and qualities are always beyond one’s expectations. I would highly recommend him
-                            for any
-                            critical projects."</p>
-                        <a href="https://www.linkedin.com/in/sharada-marasinha/" class="btn btn-primary"><i
-                                class="bi bi-linkedin"></i></a>
-                    </div>
-                    <div class="card-footer text-body-secondary">
-                        December 11, 2023, Frank was Sharada’s teacher
-                    </div>
-                </div>
-            </div> -->
+            </div>
         </div>
     </div>
+
+
+
     <!-- Contact From -->
     <div class="container col-xl-10 col-xxl-8 px-4 py-5">
         <div class="row align-items-center g-lg-5 py-5">
@@ -864,25 +810,24 @@
         </div>
     </div>
 
-    <div class="bg-white py-24 sm:py-32">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-            <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
-                <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-                    <dt class="text-base leading-7 text-gray-600">Transactions every 24 hours</dt>
-                    <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">44 million
-                    </dd>
-                </div>
-                <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-                    <dt class="text-base leading-7 text-gray-600">Assets under holding</dt>
-                    <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">$119
-                        trillion</dd>
-                </div>
-                <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-                    <dt class="text-base leading-7 text-gray-600">New users annually</dt>
-                    <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">46,000</dd>
-                </div>
-            </dl>
+    <div class="container bg-white">
+        <div class="row text-center p-5">
+            <div class="col-4">
+                <dt class="">Transactions every 24 hours</dt>
+                <dd class="">44 million
+                </dd>
+            </div>
+            <div class="col-4">
+                <dt class="">Assets under holding</dt>
+                <dd class="">$119
+                    trillion</dd>
+            </div>
+            <div class="col-4">
+                <dt class="">New users annually</dt>
+                <dd class="">46,000</dd>
+            </div>
         </div>
+
     </div>
 
 
@@ -900,6 +845,10 @@
             </div>
 
             <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark"
+                data-type="VERTICAL" data-vanity="sharada-marasinha" data-version="v1"><a
+                    class="badge-base__link LI-simple-link"
+                    href="https://lk.linkedin.com/in/sharada-marasinha?trk=profile-badge">Sharada Marasinha</a></div>
                 <li class="ms-3"><a class="text-body-secondary" href="https://www.linkedin.com/in/sharada-marasinha/"><i
                             class="bi bi-linkedin"></i></a></li>
                 <li class="ms-3"><a class="text-body-secondary"
@@ -949,7 +898,7 @@
         var x = document.getElementsByTagName('script')[0];
         x.parentNode.insertBefore(s, x);
     </script>
-    
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
     <script src="app.js"></script>
 </body>
 
