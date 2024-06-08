@@ -15,7 +15,7 @@
 <!--Helloo-->
 
 <body>
-    <div class="container-fluid  position-fixed">
+    <div class="container-fluid  position-fixed z-3">
         <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom bg-body-tertiary">
             <a href="/"
                 class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
@@ -27,9 +27,10 @@
 
             <ul class="nav nav-pills">
                 <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link ">Features</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Contact Me</a></li>
+                <li class="nav-item"><a href="#custom-cards" class="nav-link ">Features</a></li>
+                <li class="nav-item"><a href="#peojects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#recommend-container" class="nav-link">Recommendation</a></li>
+                <li class="nav-item"><a href="#contact-me" class="nav-link">Contact Me</a></li>
             </ul>
         </header>
     </div>
@@ -388,11 +389,11 @@
         </div>
     </div>
     <!-- ex & awd & projects -->
-    <div class="container ">
+    <div class="container" id="peojects">
         <div class="accordion" id="accordionPanelsStayOpenExample">
             <div class="accordion-item">
                 <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false"
                         aria-controls="panelsStayOpen-collapseOne">
                         Projects
@@ -743,9 +744,9 @@
         </div>
     </div>
     <!-- Recommendations -->
-    <div class="container">
-        <div class="row">
-            <div class="col-6">
+    <div class="container" id="recommend-container">
+        <div class="row" >
+            <div class="col-lg-6 col-sm-12">
                 <div class="card rounded-5 text-center m-5 ">
                     <div class="card-header">
                         Recommendation
@@ -767,7 +768,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-lg-6 col-sm-12">
                 <div class="card rounded-5 text-center m-5 ">
                     <div class="card-header">
                         Recommendation
@@ -794,7 +795,7 @@
 
 
     <!-- Contact From -->
-    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+    <div class="container col-xl-10 col-xxl-8 px-4 py-5" id="contact-me">
         <div class="row align-items-center g-lg-5 py-5">
             <div class="col-lg-7 text-center text-lg-start">
                 <h1 class="display-10 fw-bold lh-1 text-body-emphasis mb-3">Get in Touch
