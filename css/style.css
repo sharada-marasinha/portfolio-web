@@ -8,8 +8,12 @@ body{
   background-attachment: fixed;
 }
 
-h1{
+/* h1{
   font-family: "Briem Hand", cursive;
+} */
+
+.navigations:hover{
+  background-color: black;
 }
 
 
