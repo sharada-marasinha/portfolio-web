@@ -10,6 +10,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="shortcut icon" href="img/icons/fav.png" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
 <!--Helloo-->
@@ -37,7 +38,7 @@
     <hgroup>
         <div class="container-fluid p-5 ">
             <div class="row mt-5 p-4 pb-0 pe-lg-0 align-items-center rounded-5  shadow-lg ">
-                <div class="col-lg-7 p-3 p-lg-5">
+                <div class="col-lg-7 p-3 p-lg-5 ">
                     <h1 class="display-4 fw-bold lh-1 text-body-emphasis">Hi, i'm Sharada,</h1>
                     <p class="lead"> I am an experienced full-stack developer with a strong track record in creating
                         responsive web
@@ -54,7 +55,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 offset-lg-1 mb-3 text-center">
-                    <img class="rounded-5 shadow img-thumbnail p-2" src="img/propic_2.jpg" alt="" width="350">
+                    <img class="rounded-5 shadow img-thumbnail p-2 "  data-aos="flip-up" src="img/propic_2.jpg" alt="" width="350">
                 </div>
             </div>
         </div>
@@ -63,8 +64,8 @@
     <div class="container  py-5" id="custom-cards">
         <h2 class="bg-primary rounded p-1 fw-bolder text-white text-center">Featured</h2>
         <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-            <div class="col">
-                <div id="bg_news_img01" class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+            <div class="col ">
+                <div id="bg_news_img01" data-aos="fade-right" class="card  card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
                     style="background-image: url('img/future1.JPG');  background-position: center; background-size: cover;">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1 bg-dark bg-opacity-50">
                         <h3 id="news_title01" class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Exciting news!
@@ -94,6 +95,7 @@
 
             <div class="col">
                 <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                data-aos="fade-down"
                     style="background-image: url('img/future2.jpg'); background-position: center; background-size: cover;">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1 bg-black bg-opacity-50">
                         <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Celebration!
@@ -123,6 +125,7 @@
 
             <div class="col">
                 <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                data-aos="fade-left"
                     style="background-image: url('img/feture3.jpg'); background-position: center; background-repeat: no-repeat;">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1 bg-black bg-opacity-50">
                         <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">VIVA Evaluation</h3>
@@ -742,7 +745,7 @@
     <div class="container" id="recommend-container">
         <div class="row">
             <div class="col-lg-6 col-sm-12">
-                <div class="card rounded-5 text-center m-5 ">
+                <div class="card rounded-5 text-center m-5 " data-aos="flip-left">
                     <div class="card-header">
                         Recommendation
                     </div>
@@ -764,7 +767,7 @@
                 </div>
             </div>
             <div class="col-lg-6 col-sm-12">
-                <div class="card rounded-5 text-center m-5 ">
+                <div class="card rounded-5 text-center m-5 " data-aos="flip-right">
                     <div class="card-header">
                         Recommendation
                     </div>
@@ -785,7 +788,7 @@
                 </div>
             </div>
         </div>
-    </div>   
+    </div>
 
 
     <!-- Contact From -->
@@ -842,7 +845,7 @@
     <div class="container p-3 bg-black">
         <div class="row">
 
-            <div class="col-lg-6 col-sm-12">
+            <div class="col-lg-6 col-sm-12 ">
                 <div class="badge-base LI-profile-badge d-flex justify-content-center" data-locale="en_US"
                     data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="sharada-marasinha"
                     data-version="v1"><a class="badge-base__link LI-simple-link"
@@ -930,6 +933,10 @@
         x.parentNode.insertBefore(s, x);
     </script>
     <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
     <script src="app.js"></script>
 </body>
 
