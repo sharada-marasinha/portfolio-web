@@ -12,31 +12,30 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
-<body>
-    <nav>
-        <div class="container-fluid navigations bg-nav position-fixed z-3 ">
-            <header class="d-flex  flex-wrap justify-content-center py-3 mb-4">
-                <a href="/"
-                    class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                    <h5 class="ms-3 bg-primary p-3 rounded text-white fw-bolder figure-caption">
-                         ${ Sharada Marasinghe }
-                    </h5>
-                </a>
-    
-                <ul class="nav nav-pills bg-body-tertiary p-2 rounded shadow">
-                    <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-                    <li class="nav-item"><a href="#custom-cards" class="nav-link ">Features</a></li>
-                    <li class="nav-item"><a href="#peojects" class="nav-link">Projects</a></li>
-                    <li class="nav-item"><a href="#recommend-container" class="nav-link">Recommendation</a></li>
-                    <li class="nav-item"><a href="#contact-me" class="nav-link">Contact Me</a></li>
-                </ul>
-            </header>
-        </div>
-    </nav>
+<!--Helloo-->
 
+<body>
+    <div class="container-fluid navigations bg-nav position-fixed z-3 ">
+        <header class="d-flex  flex-wrap justify-content-center py-3 mb-4">
+            <a href="/"
+                class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <h5 class="ms-3 bg-black p-3 rounded text-white fw-bolder figure-caption">
+                    < ${ Sharada Marasinghe } />
+                </h5>
+            </a>
+
+            <ul class="nav nav-pills bg-body-tertiary p-2 rounded shadow">
+                <li class="nav-item"><a href="#" class="nav-link" aria-current="page">Home</a></li>
+                <li class="nav-item"><a href="#custom-cards" class="nav-link ">Features</a></li>
+                <li class="nav-item"><a href="#peojects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#recommend-container" class="nav-link">Recommendation</a></li>
+                <li class="nav-item"><a href="#contact-me" class="nav-link">Contact Me</a></li>
+            </ul>
+        </header>
+    </div>
 
     <hgroup>
-        <div class="container-fluid p-5">
+        <div class="container-fluid p-5 ">
             <div class="row mt-5 p-4 pb-0 pe-lg-0 align-items-center rounded-5  shadow-lg ">
                 <div class="col-lg-7 p-3 p-lg-5 ">
                     <h1 class="display-4 fw-bold lh-1 text-body-emphasis">Hi, i'm Sharada,</h1>
@@ -48,21 +47,21 @@
                         my
                         expertise to your organization's success.</p>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-                        <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold"><i
+                        <button type="button" class="btn bg-black text-white btn-lg px-4 me-md-2 fw-bold"><i
                                 class="bi bi-whatsapp"></i></button>
                         <button type="button" class="btn btn-outline-secondary btn-lg px-4"><i
                                 class="bi bi-envelope"></i></button>
                     </div>
                 </div>
                 <div class="col-lg-4 offset-lg-1 mb-3 text-center">
-                    <img class="rounded-5 shadow img-thumbnail p-2 "  data-aos="flip-up" src="img/propic_2.jpg" alt="" width="350">
+                    <img class=" shadow img-thumbnail p-2 " style="border-radius: 50%;"  data-aos="flip-up" src="img/propic_2.jpg" alt="" width="350">
                 </div>
             </div>
         </div>
     </hgroup>
 
     <div class="container  py-5" id="custom-cards">
-        <h2 class="bg-primary rounded p-1 fw-bolder text-white text-center">Featured</h2>
+        <h2 class="bg-black rounded p-1 fw-bolder text-white text-center">Featured</h2>
         <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
             <div class="col ">
                 <div id="bg_news_img01" data-aos="fade-right" class="card  card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
@@ -165,43 +164,46 @@
                         Projects
                     </button>
                 </h2>
+                
                 <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
                     <div class="accordion-body">
-                        <section id="projects">
-                            <h2>Projects</h2>
-                            <div class="project">
-                                <h3>Student Management System</h3>
-                                <p>A web-based Student Information Management System created using Spring Boot, Lombok,
-                                    Spring Data, MySQL, Layade, Fetch API, JavaScript, HTML, and CSS to manage student
-                                    data efficiently.</p>
-                                <a href="https://github.com/yourusername/student-management-frontend"
+                        <section id="projects" class="container">
+                            <h1 class="border text-center fw-bold p-2">Projects</h1>
+                            <div class="project card m-1 p-3 shadow col">
+                                <h3 class="p-3 bg-body-secondary">Student Management System</h3>
+                                <ul>
+                                    <li><p>A web-based Student Information Management System created using Spring Boot, Lombok,
+                                        Spring Data, MySQL, Layade, Fetch API, JavaScript, HTML, and CSS to manage student
+                                        data efficiently.</p></li>
+                                </ul>
+                                <a class="nav-link bg-black text-white p-2 text-center rounded m-1" href="https://github.com/yourusername/student-management-frontend"
                                     target="_blank">GitHub Repository Front-End</a>
-                                <a href="https://github.com/yourusername/student-management-backend"
+                                <a class="nav-link bg-black text-white p-2 text-center rounded m-1" href="https://github.com/yourusername/student-management-backend"
                                     target="_blank">GitHub Repository Back-End</a>
                             </div>
-                            <div class="project">
+                            <div class="project card m-1 p-3 shadow col">
                                 <h3>Clothify Store POS System</h3>
                                 <p>Developed with Hibernate, JavaFX, JFoenix, MySQL, Maven, and Java, this POS system
                                     streamlines operations with features like user, product, inventory, supplier, and
                                     employee management, order placement and details, report generation, and Jasper
                                     Reports integration.</p>
-                                <a href="https://github.com/yourusername/clothify-store-pos" target="_blank">GitHub
+                                <a class="nav-link bg-black text-white p-2 text-center rounded m-1" href="https://github.com/yourusername/clothify-store-pos" target="_blank">GitHub
                                     Repository</a>
                             </div>
-                            <div class="project">
+                            <div class="project card m-1 p-3 shadow col">
                                 <h3>Real-Time Weather Web Application</h3>
                                 <p>This project utilizes a Weather API, JavaScript, HTML, and CSS to provide current and
                                     forecasted weather, historical data, interactive maps, and user customization. It
                                     ensures performance optimization, user-friendly design, security, and cross-browser
                                     compatibility.</p>
-                                <a href="https://github.com/yourusername/weather-web-application" target="_blank">GitHub
+                                <a class="nav-link bg-black text-white p-2 text-center rounded m-1" href="https://github.com/yourusername/weather-web-application" target="_blank">GitHub
                                     Repository</a>
                             </div>
-                            <div class="project">
+                            <div class="project card m-1 p-3 shadow col">
                                 <h3>Chat App</h3>
                                 <p>Designed and developed a chat application using Java Swing with the
                                     Observer/Observable design pattern.</p>
-                                <a href="https://github.com/yourusername/chat-app" target="_blank">GitHub Repository</a>
+                                <a class="nav-link bg-black text-white p-2 text-center rounded m-1" href="https://github.com/yourusername/chat-app" target="_blank">GitHub Repository</a>
                             </div>
                         </section>
                         <section id="tech-stack">
@@ -889,14 +891,54 @@
         </footer>
     </footer>
 
+
+
+    <script src="https://gist.github.com/sharada-marasinha/e27c4a31f7574326639984ded44a1c3c.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script>
+        var url = 'https://wati-integration-prod-service.clare.ai/v2/watiWidget.js?73958';
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = url;
+        var options = {
+            "enabled": true,
+            "chatButtonSetting": {
+                "backgroundColor": "#0000ff",
+                "ctaText": "Chat with me",
+                "borderRadius": "25",
+                "marginLeft": "0",
+                "marginRight": "20",
+                "marginBottom": "20",
+                "ctaIconWATI": false,
+                "position": "right"
+            },
+            "brandSetting": {
+                "brandName": "Sharadha",
+                "brandSubTitle": "undefined",
+                "brandImg": "https://www.wati.io/wp-content/uploads/2023/04/Wati-logo.svg",
+                "welcomeText": "Hi there!\nHow can I help you?",
+                "messageText": "Hello, %0A I have a question about ",
+                "backgroundColor": "#0000ff",
+                "ctaText": "Chat with me",
+                "borderRadius": "25",
+                "autoShow": false,
+                "phoneNumber": "94779911825"
+            }
+        };
+        s.onload = function () {
+            CreateWhatsappChatWidget(options);
+        };
+        var x = document.getElementsByTagName('script')[0];
+        x.parentNode.insertBefore(s, x);
+    </script>
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
       </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
     <script src="app.js"></script>
 </body>
 
