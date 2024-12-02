@@ -1,10 +1,11 @@
 import React from 'react';
+import profileImage from '../assets/images/pro_pic.jpg';
 
 const About: React.FC = () => {
   return (
     <section id="about" className="relative py-20 overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-space-gradient opacity-30" />
+      <div className="absolute inset-0 bg-space-gradient opacity-0" />
       <div className="constellation absolute inset-0" />
       
       <div className="container mx-auto px-4 relative">
@@ -23,7 +24,7 @@ const About: React.FC = () => {
                 <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-500 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000"></div>
                 <div className="relative aspect-square rounded-lg overflow-hidden">
                   <img 
-                    src="/path-to-your-image.jpg" 
+                    src={profileImage} 
                     alt="Profile" 
                     className="w-full h-full object-cover transform transition duration-500 group-hover:scale-105"
                   />
