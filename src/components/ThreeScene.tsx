@@ -88,7 +88,7 @@ const ThreeScene: React.FC = () => {
     );
 
     // Camera position
-    camera.position.set(0, 0, 5);
+    camera.position.set(0, 0, 3);
 
     // Mouse movement effect
     let mouseX = 0;
@@ -104,7 +104,7 @@ const ThreeScene: React.FC = () => {
       requestAnimationFrame(animate);
 
       // Rotate particles
-      particlesMesh.rotation.y += 0.001;
+      particlesMesh.rotation.y += 0.003;
       
       if (model) {
         model.rotation.y += 0.005;
