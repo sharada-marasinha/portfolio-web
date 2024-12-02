@@ -1,0 +1,1 @@
+Placeholder for colonization ship model. Please replace with the actual .glb file.
