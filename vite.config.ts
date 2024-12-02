@@ -22,7 +22,7 @@ export default defineConfig({
       brotliSize: true
     })
   ],
-  base:"/portfolio-web/",
+  // base:"/portfolio-web/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
