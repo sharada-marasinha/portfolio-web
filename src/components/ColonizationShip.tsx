@@ -19,7 +19,7 @@ const ColonizationShip: React.FC = memo(() => {
   });
 
   const cleanupScene = useCallback(() => {
-    const { scene, camera, renderer, controls, animationFrameId } = sceneRef.current;
+    const { scene, renderer, controls, animationFrameId } = sceneRef.current;
     
     if (animationFrameId) {
       cancelAnimationFrame(animationFrameId);
@@ -89,7 +89,7 @@ const ColonizationShip: React.FC = memo(() => {
 
         setModelState({ loaded: true, error: false });
 
-        let frameId: number;
+        let frameId = 0;
         const animate = () => {
           frameId = requestAnimationFrame(animate);
           
