@@ -48,7 +48,7 @@ const About: React.FC = () => {
 
                 {/* Tech Stack Pills */}
                 <div className="flex flex-wrap gap-3 pt-4">
-                  {['React', 'Node.js', 'TypeScript', 'Three.js', 'Spring Boot'].map((tech, index) => (
+                  {['React','Angular', 'Node.js', 'Express.js', 'Three.js', 'Spring Boot'].map((tech, index) => (
                     <span 
                       key={tech}
                       className="px-4 py-2 text-sm font-medium rounded-full bg-space-card hover:bg-space-card-hover transition-all duration-300"
@@ -67,7 +67,7 @@ const About: React.FC = () => {
                 { label: 'Projects', value: '15+' },
                 { label: 'Experience', value: '2+ Years' },
                 { label: 'Technologies', value: '10+' },
-                { label: 'Certifications', value: '5+' }
+                { label: 'Certifications', value: '5+' },
               ].map((stat, index) => (
                 <div 
                   key={stat.label}

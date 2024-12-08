@@ -11,17 +11,17 @@ interface ExperienceItem {
 
 const Experience: React.FC = () => {
   const experiences: ExperienceItem[] = [
-    {
-      title: "Associate Software Engineer",
-      company: "Emerging Tech Solutions",
-      period: "May 2024 - Present",
-      description: [
-        "Developing innovative software solutions",
-        "Implementing cutting-edge technologies",
-        "Collaborating with cross-functional teams"
-      ],
-      technologies: ["React", "TypeScript", "Node.js", "AWS"]
-    },
+    // {
+    //   title: "Associate Software Engineer",
+    //   company: "Emerging Tech Solutions",
+    //   period: "May 2024 - Present",
+    //   description: [
+    //     "Developing innovative software solutions",
+    //     "Implementing cutting-edge technologies",
+    //     "Collaborating with cross-functional teams"
+    //   ],
+    //   technologies: ["React", "TypeScript", "Node.js", "AWS"]
+    // },
     {
       title: "Assistant Lecturer",
       company: "Software Engineering Institute",

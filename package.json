@@ -1,11 +1,15 @@
 {
+  "homepage":"https://sharada-marasinha.github.io/portfolio-web",
   "name": "flowbite-react-template-vite",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+
     "dev": "vite",
     "build": "tsc && vite build",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d dist",
     "preview": "vite preview",
     "format": "prettier . --write",
     "format:check": "prettier . --check",
