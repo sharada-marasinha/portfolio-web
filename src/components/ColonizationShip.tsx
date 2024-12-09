@@ -92,8 +92,6 @@ const ColonizationShip: React.FC = memo(() => {
         let frameId = 0;
         const animate = () => {
           frameId = requestAnimationFrame(animate);
-          
-          model.position.y += Math.sin(Date.now() * 0.001) * 0.02;
           controls.update();
           renderer.render(scene, camera);
         };

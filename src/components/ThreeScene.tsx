@@ -1,10 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
-import { OrbitControls } from "three-stdlib";
-import { GLTFLoader } from "three-stdlib";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 const ThreeScene: React.FC = () => {
   const mountRef = useRef<HTMLDivElement | null>(null);
+  const modelRef = useRef<THREE.Object3D | null>(null);
 
   useEffect(() => {
     if (!mountRef.current) return;
@@ -26,8 +27,6 @@ const ThreeScene: React.FC = () => {
     });
     renderer.setSize(mountRef.current.clientWidth, mountRef.current.clientHeight);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    renderer.toneMapping = THREE.ACESFilmicToneMapping;
-    renderer.toneMappingExposure = 1;
     mountRef.current.appendChild(renderer.domElement);
 
     // Lighting
@@ -72,14 +71,13 @@ const ThreeScene: React.FC = () => {
 
     // Load 3D Model
     const loader = new GLTFLoader();
-    let model: THREE.Object3D | null = null;
     loader.load(
-      "/models/blackhole.glb",
+      '/src/assets/3d-models/blackhole.glb',
       (gltf) => {
-        model = gltf.scene;
-        model.scale.set(0.5, 0.5, 0.5);
-        model.position.set(0, 0, 0);
-        scene.add(model);
+        modelRef.current = gltf.scene;
+        modelRef.current.scale.set(0.5, 0.5, 0.5);
+        modelRef.current.position.set(0, 0, 0);
+        scene.add(modelRef.current);
       },
       undefined,
       (error) => {
@@ -106,10 +104,10 @@ const ThreeScene: React.FC = () => {
       // Rotate particles
       particlesMesh.rotation.y += 0.003;
       
-      if (model) {
-        model.rotation.y += 0.005;
+      if (modelRef.current) {
+        modelRef.current.rotation.y += 0.005;
         // Subtle floating movement
-        model.position.y = Math.sin(Date.now() * 0.001) * 0.1;
+        modelRef.current.position.y = Math.sin(Date.now() * 0.001) * 0.1;
       }
 
       // Mouse movement effect
@@ -141,6 +139,11 @@ const ThreeScene: React.FC = () => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('mousemove', handleMouseMove);
       mountRef.current?.removeChild(renderer.domElement);
+      
+      // Cleanup Three.js resources
+      particlesGeometry.dispose();
+      particlesMaterial.dispose();
+      renderer.dispose();
     };
   }, []);
 

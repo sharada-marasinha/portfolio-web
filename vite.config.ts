@@ -9,6 +9,7 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  assetsInclude: ['**/*.glb'],
   build: {
     rollupOptions: {
       output: {
@@ -25,5 +26,4 @@ export default defineConfig({
   optimizeDeps: {
     include: ['three'],
   },
-  assetsInclude: ['**/*.png', '**/*.svg', '**/*.glb'],
 });
