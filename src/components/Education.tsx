@@ -12,38 +12,50 @@ interface EducationItem {
 const Education: React.FC = () => {
   const educationData: EducationItem[] = [
     {
-      degree: 'BSc (Hons) in Computer Science',
-      school: 'University of Colombo School of Computing',
-      duration: '2020 - Present',
-      location: 'Colombo, Sri Lanka',
+      degree: 'BSc (Hons) Computer Science (Software Engineering)',
+      school: 'Kingston University',
+      duration: '2024 - Present',
+      location: 'United Kingdom',
       description: [
         'Specializing in Software Engineering',
-        'Member of IEEE Student Branch',
-        'Active participant in university hackathons and coding competitions',
-        'Research focus on AI and Machine Learning applications'
+        'Focus on advanced software development methodologies',
+        'Research in modern software architecture patterns',
+        'International perspective on software engineering practices'
       ],
-      gpa: '3.8/4.0'
+      gpa: 'In Progress'
     },
     {
-      degree: 'Advanced Level Education',
-      school: 'Rahula College',
-      duration: '2017 - 2019',
-      location: 'Matara, Sri Lanka',
+      degree: 'BTEC Higher National Diploma (HND) in Computing',
+      school: 'Pearson College London',
+      duration: '2024 - 2026',
+      location: 'London, UK',
       description: [
-        'Stream: Physical Science',
-        'District Rank: Top 10%',
-        'Active member of the school\'s IT Society',
-        'Participated in national level competitions'
+        'Major: Computing',
+        'Practical approach to computing technologies',
+        'Industry-relevant curriculum and projects',
+        'Emphasis on real-world problem solving'
       ]
+    },
+    {
+      degree: 'Higher Diploma in Software Engineering',
+      school: 'Institute of Computer Engineering Technology (iCET)',
+      duration: '2023',
+      location: 'Panadura, Sri Lanka',
+      description: [
+        'Team Leader at LexcodeX Software Team',
+        'Comprehensive software engineering training',
+        'Hands-on experience with enterprise technologies',
+        'Led multiple student software projects'
+      ],
+      gpa: 'Distinction'
     }
   ];
 
   return (
-    <section id="education" className="relative py-20 overflow-hidden">
+    <section id="education" className="relative py-20">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-space-gradient opacity-30" />
-      <div className="constellation absolute inset-0" />
-      
+      <div className="absolute inset-0 bg-gradient-to-b from-space-primary to-space-secondary opacity-50" />
+
       <div className="container mx-auto px-4 relative">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold cosmic-text mb-4">
@@ -55,8 +67,8 @@ const Education: React.FC = () => {
         <div className="max-w-4xl mx-auto">
           <div className="education-timeline">
             {educationData.map((item, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="education-card"
                 style={{ animationDelay: `${index * 200}ms` }}
               >
@@ -80,7 +92,7 @@ const Education: React.FC = () => {
                   <div className="education-details">
                     <ul className="space-y-2">
                       {item.description.map((desc, i) => (
-                        <li 
+                        <li
                           key={i}
                           className="education-detail-item"
                           style={{ animationDelay: `${(index * 200) + (i * 100)}ms` }}
@@ -101,14 +113,6 @@ const Education: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
-
-        {/* Floating Elements */}
-        <div className="absolute top-20 left-10 w-20 h-20 orbit-element opacity-20">
-          <div className="w-full h-full rounded-full bg-gradient-to-r from-blue-500 to-purple-500" />
-        </div>
-        <div className="absolute bottom-20 right-10 w-16 h-16 orbit-element opacity-20" style={{ animationDelay: '-5s' }}>
-          <div className="w-full h-full rounded-full bg-gradient-to-r from-purple-500 to-pink-500" />
         </div>
       </div>
     </section>

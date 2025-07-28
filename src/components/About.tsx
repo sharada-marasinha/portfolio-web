@@ -7,7 +7,7 @@ const About: React.FC = () => {
       {/* Background Effects */}
       <div className="absolute inset-0 bg-space-gradient opacity-0" />
       <div className="constellation absolute inset-0" />
-      
+
       <div className="container mx-auto px-4 relative">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold cosmic-text mb-4">
@@ -23,9 +23,9 @@ const About: React.FC = () => {
               <div className="relative group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-500 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000"></div>
                 <div className="relative aspect-square rounded-lg overflow-hidden">
-                  <img 
-                    src={profileImage} 
-                    alt="Profile" 
+                  <img
+                    src={profileImage}
+                    alt="Profile"
                     className="w-full h-full object-cover transform transition duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
@@ -35,21 +35,28 @@ const About: React.FC = () => {
               {/* About Text */}
               <div className="space-y-6 text-gray-300">
                 <p className="text-lg leading-relaxed animate-slide-up">
-                  I am a dynamic full-stack developer with a proven history of crafting responsive 
-                  web applications. Specializing in front-end and back-end technologies, I deliver 
-                  high-quality projects on time and within budget.
+                  Skilled Software Engineer and Assistant Lecturer with 3+ years of experience in full-stack
+                  development and academic mentoring. Proficient in Java, Spring Boot, Angular, and JavaFX.
+                  Delivered 15+ real-world projects, guided 1000+ students, and contributed to international
+                  software teams using Agile and CI/CD practices.
                 </p>
                 <p className="text-lg leading-relaxed animate-slide-up-delay">
-                  My expertise in problem-solving, collaboration, and trend analysis makes me a 
-                  valuable asset to any team. Currently serving as an Assistant Lecturer while 
-                  pursuing my undergraduate studies, I bring both academic and practical experience 
-                  to my work.
+                  Currently serving as an Assistant Lecturer at iCET, Colombo, while pursuing my BSc (Hons)
+                  Computer Science (Software Engineering) at Kingston University. My expertise in problem-solving,
+                  collaboration, and trend analysis makes me a valuable asset to any team.
+                </p>
+                <p className="text-lg leading-relaxed animate-slide-up-delay">
+                  I have supervised 85+ developers on large-scale projects like WeCare System and EVO-PLANE,
+                  integrating cutting-edge technologies like Apache Kafka, OAuth authentication, and SendGrid APIs.
                 </p>
 
                 {/* Tech Stack Pills */}
                 <div className="flex flex-wrap gap-3 pt-4">
-                  {['React','Angular', 'Node.js', 'Express.js', 'Three.js', 'Spring Boot'].map((tech, index) => (
-                    <span 
+                  {[
+                    'Java', 'Spring Boot', 'Angular', 'React.js', 'Node.js', 'Express.js',
+                    'TypeScript', 'Python', 'C#.NET', 'Three.js', 'AWS', 'Docker'
+                  ].map((tech, index) => (
+                    <span
                       key={tech}
                       className="px-4 py-2 text-sm font-medium rounded-full bg-space-card hover:bg-space-card-hover transition-all duration-300"
                       style={{ animationDelay: `${index * 100}ms` }}
@@ -64,12 +71,12 @@ const About: React.FC = () => {
             {/* Stats Section */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
               {[
-                { label: 'Projects', value: '15+' },
-                { label: 'Experience', value: '2+ Years' },
-                { label: 'Technologies', value: '10+' },
-                { label: 'Certifications', value: '5+' },
+                { label: 'Projects Delivered', value: '15+' },
+                { label: 'Students Trained', value: '1000+' },
+                { label: 'Experience', value: '3+ Years' },
+                { label: 'Technologies', value: '15+' },
               ].map((stat, index) => (
-                <div 
+                <div
                   key={stat.label}
                   className="text-center p-4 space-card hover:transform hover:-translate-y-2 transition-all duration-300"
                   style={{ animationDelay: `${index * 100}ms` }}

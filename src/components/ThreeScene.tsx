@@ -1,32 +1,35 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import * as THREE from "three";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { OrbitControls } from "three-stdlib";
+import { GLTFLoader } from "three-stdlib";
 
 const ThreeScene: React.FC = () => {
   const mountRef = useRef<HTMLDivElement | null>(null);
   const modelRef = useRef<THREE.Object3D | null>(null);
+  const animationRef = useRef<number | null>(null);
 
   useEffect(() => {
     if (!mountRef.current) return;
 
     // Scene setup
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x0a192f); // Dark blue background
+    scene.background = null; // Transparent background
 
     const camera = new THREE.PerspectiveCamera(
       75,
-      mountRef.current.clientWidth / mountRef.current.clientHeight,
+      window.innerWidth / window.innerHeight,
       0.1,
       1000
     );
 
-    const renderer = new THREE.WebGLRenderer({ 
+    const renderer = new THREE.WebGLRenderer({
       antialias: true,
-      alpha: true 
+      alpha: true,
+      powerPreference: "high-performance"
     });
-    renderer.setSize(mountRef.current.clientWidth, mountRef.current.clientHeight);
+    renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.domElement.style.pointerEvents = 'none'; // Allow clicks to pass through
     mountRef.current.appendChild(renderer.domElement);
 
     // Lighting
@@ -46,7 +49,7 @@ const ThreeScene: React.FC = () => {
     const particlesCount = 5000;
     const posArray = new Float32Array(particlesCount * 3);
 
-    for(let i = 0; i < particlesCount * 3; i++) {
+    for (let i = 0; i < particlesCount * 3; i++) {
       posArray[i] = (Math.random() - 0.5) * 10;
     }
 
@@ -66,54 +69,53 @@ const ThreeScene: React.FC = () => {
     controls.enableDamping = true;
     controls.dampingFactor = 0.05;
     controls.enableZoom = false;
+    controls.enablePan = false;
     controls.autoRotate = true;
-    controls.autoRotateSpeed = 0.5;
+    controls.autoRotateSpeed = 0.3;
+    controls.enabled = false; // Disable user interaction for background
 
     // Load 3D Model
     const loader = new GLTFLoader();
     loader.load(
-      '/src/assets/3d-models/blackhole.glb',
-      (gltf) => {
+      "/models/1.glb",
+      (gltf: any) => {
         modelRef.current = gltf.scene;
-        modelRef.current.scale.set(0.5, 0.5, 0.5);
-        modelRef.current.position.set(0, 0, 0);
-        scene.add(modelRef.current);
+        if (modelRef.current) {
+          modelRef.current.scale.set(0.3, 0.3, 0.3);
+          modelRef.current.position.set(2, -1, 0);
+
+          // Make model semi-transparent for background effect
+          modelRef.current.traverse((child: any) => {
+            if (child.isMesh) {
+              child.material.transparent = true;
+              child.material.opacity = 0.7;
+            }
+          });
+
+          scene.add(modelRef.current);
+        }
       },
       undefined,
-      (error) => {
-        console.error("Error loading model:", error);
+      (error: any) => {
+        console.error("Error loading 3D model:", error);
       }
     );
 
     // Camera position
-    camera.position.set(0, 0, 3);
-
-    // Mouse movement effect
-    let mouseX = 0;
-    let mouseY = 0;
-    const handleMouseMove = (event: MouseEvent) => {
-      mouseX = (event.clientX / window.innerWidth) * 2 - 1;
-      mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
-    };
-    window.addEventListener('mousemove', handleMouseMove);
+    camera.position.set(0, 0, 5);
 
     // Animation
     const animate = () => {
-      requestAnimationFrame(animate);
+      animationRef.current = requestAnimationFrame(animate);
 
       // Rotate particles
-      particlesMesh.rotation.y += 0.003;
-      
-      if (modelRef.current) {
-        modelRef.current.rotation.y += 0.005;
-        // Subtle floating movement
-        modelRef.current.position.y = Math.sin(Date.now() * 0.001) * 0.1;
-      }
+      particlesMesh.rotation.y += 0.002;
 
-      // Mouse movement effect
-      camera.position.x += (mouseX * 0.5 - camera.position.x) * 0.05;
-      camera.position.y += (mouseY * 0.5 - camera.position.y) * 0.05;
-      camera.lookAt(scene.position);
+      if (modelRef.current) {
+        modelRef.current.rotation.y += 0.003;
+        // Subtle floating movement
+        modelRef.current.position.y = Math.sin(Date.now() * 0.001) * 0.05;
+      }
 
       controls.update();
       renderer.render(scene, camera);
@@ -123,12 +125,9 @@ const ThreeScene: React.FC = () => {
 
     // Handle resize
     const handleResize = () => {
-      if (!mountRef.current) return;
-      
-      camera.aspect = mountRef.current.clientWidth / mountRef.current.clientHeight;
+      camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
-      
-      renderer.setSize(mountRef.current.clientWidth, mountRef.current.clientHeight);
+      renderer.setSize(window.innerWidth, window.innerHeight);
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     };
 
@@ -137,27 +136,35 @@ const ThreeScene: React.FC = () => {
     // Cleanup
     return () => {
       window.removeEventListener('resize', handleResize);
-      window.removeEventListener('mousemove', handleMouseMove);
-      mountRef.current?.removeChild(renderer.domElement);
-      
+
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+
+      if (mountRef.current && renderer.domElement) {
+        mountRef.current.removeChild(renderer.domElement);
+      }
+
       // Cleanup Three.js resources
       particlesGeometry.dispose();
       particlesMaterial.dispose();
+      controls.dispose();
       renderer.dispose();
     };
   }, []);
 
   return (
-    <div 
-      ref={mountRef} 
-      style={{ 
+    <div
+      ref={mountRef}
+      style={{
         position: 'absolute',
         top: 0,
         left: 0,
-        width: '100%', 
+        width: '100%',
         height: '100%',
-        zIndex: 0
-      }} 
+        zIndex: 0,
+        pointerEvents: 'none'
+      }}
     />
   );
 };

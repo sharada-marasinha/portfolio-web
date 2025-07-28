@@ -11,38 +11,41 @@ interface ExperienceItem {
 
 const Experience: React.FC = () => {
   const experiences: ExperienceItem[] = [
-    // {
-    //   title: "Associate Software Engineer",
-    //   company: "Emerging Tech Solutions",
-    //   period: "May 2024 - Present",
-    //   description: [
-    //     "Developing innovative software solutions",
-    //     "Implementing cutting-edge technologies",
-    //     "Collaborating with cross-functional teams"
-    //   ],
-    //   technologies: ["React", "TypeScript", "Node.js", "AWS"]
-    // },
     {
       title: "Assistant Lecturer",
-      company: "Software Engineering Institute",
-      period: "Jan 2024 - Present",
+      company: "iCET, Colombo",
+      period: "Mar 2024 - Present",
       description: [
-        "Instructing advanced software development courses",
-        "Developing comprehensive curriculum for emerging technologies",
-        "Mentoring students in application development techniques"
+        "Trained 1000+ students in Java, HTML/CSS, and JavaScript programming",
+        "Guided 15+ full-stack projects using Spring Boot, Angular, and React technologies",
+        "Supervised 30+ final-year projects with 95% scoring distinction grades",
+        "Led large-scale systems (WeCare, EVO-PLANE) with Kafka, OAuth, and SendGrid integration"
       ],
-      technologies: ["Java", "Spring Boot", "React", "Angular"]
+      technologies: ["Java", "Spring Boot", "Angular", "React", "JavaScript", "HTML/CSS"]
     },
     {
-      title: "Training Software Engineer",
-      company: "Lex-Code X (ICET)",
-      period: "Oct 2023 - Dec 2023",
+      title: "Associate Software Engineer",
+      company: "Eco X-pert Group, New Zealand (Remote)",
+      period: "Mar 2024 – Mar 2025",
       description: [
-        "Led development of enterprise-grade e-commerce platform",
-        "Managed agile development processes and team collaboration",
-        "Implemented best practices in software design and architecture"
+        "Developed and maintained 5+ web applications, reducing bug rate by 30% post-QA testing",
+        "Improved CI/CD deployment time by 45% by optimizing Git workflows and build pipelines",
+        "Boosted API performance by 25% by refactoring REST endpoints and implementing caching strategies",
+        "Collaborated with international teams using Agile methodologies and modern DevOps practices"
       ],
-      technologies: ["Spring Boot", "Angular", "Agile Methodologies"]
+      technologies: ["React", "Node.js", "AWS", "Docker", "CI/CD", "Git", "REST APIs"]
+    },
+    {
+      title: "Intern Software Engineer",
+      company: "Tech Z Solution – Ratnapura, Sri Lanka",
+      period: "Jan 2022 – Jun 2022",
+      description: [
+        "Collaborated on 3 major modules, reducing delivery time by 20% through efficient team communication",
+        "Participated in Agile stand-ups and collaborative debugging sessions with development teams",
+        "Helped increase bug fix rate by 35% by automating local test cases and using Git effectively",
+        "Gained hands-on experience in software development lifecycle and version control systems"
+      ],
+      technologies: ["Java", "Git", "Agile Methodologies", "Unit Testing", "Debugging"]
     }
   ];
 
@@ -70,8 +73,8 @@ const Experience: React.FC = () => {
   };
 
   return (
-    <section 
-      id="experience" 
+    <section
+      id="experience"
       className="relative py-20 bg-black text-white overflow-hidden"
     >
       {/* Starry Background */}
@@ -79,7 +82,7 @@ const Experience: React.FC = () => {
       <div className="constellation absolute inset-0 pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10">
-        <motion.h2 
+        <motion.h2
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -88,14 +91,14 @@ const Experience: React.FC = () => {
           Professional Trajectory
         </motion.h2>
 
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
           className="max-w-4xl mx-auto space-y-8"
         >
           {experiences.map((exp, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               variants={itemVariants}
               className="bg-gray-900/50 backdrop-blur-sm rounded-xl p-6 border border-gray-800 transition-all duration-300 hover:bg-gray-800/70 hover:border-blue-500"
@@ -114,8 +117,8 @@ const Experience: React.FC = () => {
 
               <ul className="space-y-2 text-gray-300 mb-4">
                 {exp.description.map((item, idx) => (
-                  <li 
-                    key={idx} 
+                  <li
+                    key={idx}
                     className="flex items-start before:content-['▹'] before:text-blue-500 before:mr-2"
                   >
                     {item}
@@ -126,8 +129,8 @@ const Experience: React.FC = () => {
               {exp.technologies && (
                 <div className="flex flex-wrap gap-2">
                   {exp.technologies.map((tech, techIdx) => (
-                    <span 
-                      key={techIdx} 
+                    <span
+                      key={techIdx}
                       className="px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full text-xs"
                     >
                       {tech}
